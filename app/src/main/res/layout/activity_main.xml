@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/panellist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/panellist_bg"
+        android:gravity="right|bottom"
+        android:orientation="vertical"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/taskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0d0d0d"
+            android:textSize="36sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/clearbtn"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/clear_btn_bg"
+        android:gravity="center"
+        android:onClick="clearClicked"
+        android:text="AC"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/comabtn"
+        app:layout_constraintTop_toBottomOf="@id/panellist"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/comabtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/module_btn_bg"
+        android:gravity="center"
+        android:onClick="operatorClicked"
+        android:padding="10dp"
+        android:text=","
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/clearbtn"
+        app:layout_constraintRight_toLeftOf="@id/dividerbtn"
+        app:layout_constraintTop_toTopOf="@+id/clearbtn" />
+
+    <TextView
+        android:id="@+id/dividerbtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/module_btn_bg"
+        android:gravity="center"
+        android:onClick="operatorClicked"
+        android:padding="10dp"
+        android:text="/"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/comabtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clearbtn" />
+
+
+    <TextView
+        android:id="@+id/seven"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="7"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/eight"
+        app:layout_constraintTop_toBottomOf="@id/clearbtn" />
+
+    <TextView
+        android:id="@+id/eight"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="8"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/seven"
+        app:layout_constraintRight_toLeftOf="@id/nine"
+        app:layout_constraintTop_toTopOf="@id/seven" />
+
+
+    <TextView
+        android:id="@+id/nine"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="9"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/eight"
+        app:layout_constraintRight_toLeftOf="@id/x_btn"
+        app:layout_constraintTop_toTopOf="@id/seven" />
+
+    <TextView
+        android:id="@+id/x_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/module_btn_bg"
+        android:gravity="center"
+        android:onClick="operatorClicked"
+        android:padding="10dp"
+        android:text="x"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/nine"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/seven" />
+
+    <TextView
+        android:id="@+id/six"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="6"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/five"
+        app:layout_constraintTop_toBottomOf="@+id/seven" />
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="5"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/six"
+        app:layout_constraintRight_toLeftOf="@id/four"
+        app:layout_constraintTop_toTopOf="@id/six" />
+
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="4"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/five"
+        app:layout_constraintRight_toLeftOf="@id/minus_btn"
+        app:layout_constraintTop_toTopOf="@id/six"
+
+        />
+
+    <TextView
+        android:id="@+id/minus_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/module_btn_bg"
+        android:gravity="center"
+        android:onClick="operatorClicked"
+        android:padding="10dp"
+        android:text="-"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/four"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/six" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="3"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/two"
+        app:layout_constraintTop_toBottomOf="@id/six" />
+
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="2"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/three"
+        app:layout_constraintRight_toLeftOf="@id/one"
+        app:layout_constraintTop_toTopOf="@id/three" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/numbers_btn_color"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/two"
+        app:layout_constraintRight_toLeftOf="@id/plus_btn"
+        app:layout_constraintTop_toTopOf="@id/three" />
+
+    <TextView
+        android:id="@+id/plus_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/module_btn_bg"
+        android:gravity="center"
+        android:onClick="operatorClicked"
+        android:padding="10dp"
+        android:text="+"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/three" />
+
+    <TextView
+        android:id="@+id/zero"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zero_bt_bg"
+        android:gravity="center"
+        android:onClick="numberClicked"
+        android:padding="10dp"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@id/three"
+        app:layout_constraintRight_toRightOf="@id/two"
+        app:layout_constraintTop_toBottomOf="@id/three" />
+
+
+
+
+    <TextView
+        android:id="@+id/equal_btn"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:background="@drawable/equal_btn_bg"
+        android:gravity="center"
+        android:onClick="equalClick"
+        android:padding="10dp"
+        android:text="="
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@+id/zero"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/zero" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
